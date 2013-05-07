@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bayesays</title>
+	<style>
+	html { font-family: helvetica;}
+	.dot { display: inline-block; width: 5px; height: 5px; border-radius: 3px; margin: 3px; }
+	.falseNegatives { clear: left;}
+	.truePositives .dot { background-color: #900;}
+	.falsePositives .dot { background-color: red;}
+	.trueNegatives .dot { background-color: green; }
+	.falseNegatives .dot { background-color: red;}
+	td.set { width: 300px; line-height: 6px;}
+	th, td { text-align:left; vertical-align: top; font-weight: normal;}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td></td>
+				<th>Actually positive</th>
+				<th>Actually negative</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Test positive</th>
+				<td class="set truePositives"></td>
+				<td class="set falsePositives"></td>
+			</tr>
+			<tr>
+				<th>Test negative</th>
+				<td class="set falseNegatives"></td>
+				<td class="set trueNegatives"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script src="bayesays.js"></script>
+</body>
+</html>
