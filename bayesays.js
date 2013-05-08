@@ -30,7 +30,6 @@ var render = function(data){
 	["truePositives", "falsePositives", "trueNegatives", "falseNegatives"].forEach(function(set){
 		var el = document.querySelectorAll("."+set)[0];
 		el.innerHTML = dots(data[set]);
-		debugger;
 	});
 };
 

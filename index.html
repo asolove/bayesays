@@ -3,7 +3,9 @@
 <head>
 	<title>Bayesays</title>
 	<style>
-	html { font-family: helvetica;}
+	html { font-family: helvetica; margin: 50px; color: #333; background-color:#fff;}
+	.info { float: left; width: 320px; }
+	p { margin: 0 40px 20px 0;}
 	.dot { display: inline-block; width: 5px; height: 5px; border-radius: 3px; margin: 3px; }
 	.falseNegatives { clear: left;}
 	.truePositives .dot { background-color: #900;}
@@ -12,9 +14,19 @@
 	.falseNegatives .dot { background-color: red;}
 	td.set { width: 300px; line-height: 6px;}
 	th, td { text-align:left; vertical-align: top; font-weight: normal;}
+	tr > *:nth-child(2){ width: 150px}
+	span[data-var]{ border-bottom: 1px dotted #999; cursor: col-resize; }
 	</style>
 </head>
 <body>
+	<h1>Bayesays</h1>
+	<div class="info">
+		<p><span data-var="sample">1000</span> people take a medical test. 
+			<span data-var="actuallyPositive">10</span> of them actually suffer from the condition.
+			The test is <span data-var="accuracy">80</span>% accurate.</p>
+		<p><span data-var="testPositive">206</span> tests come back positive, but <span data-var="falsePositive">198</span> of them are false positives.<br>
+			<span data-var="testNegative">794</span> tests come back negative, but <span data-var="falseNegative">2</span> of them are false negatives.</p>
+	</div>
 	<table>
 		<thead>
 			<tr>
